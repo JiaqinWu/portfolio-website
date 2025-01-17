@@ -3,15 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Portfolio</title>
+    <title>Jiaqin Wu - Portfolio</title>
     <link rel="stylesheet" href="css/styles.css">
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
 </head>
 <body>
     <header>
         <nav>
             <ul>
                 <li><a href="index.html">Home</a></li>
-                <li><a href="about.html">About</a></li>
                 <li><a href="resume.html">Resume</a></li>
                 <li><a href="publications.html">Publications</a></li>
                 <li><a href="projects.html">Projects</a></li>
@@ -21,14 +21,47 @@
 
     <main>
         <section class="hero">
-            <h1>Welcome to My Portfolio</h1>
-            <p>Hi, I'm Jiaqin Wu, a passionate [Your Field].</p>
-            <a href="about.html" class="cta">Learn More About Me</a>
+            <div style="display: block; text-align: center;">
+                <img class="portrait" src="./images/avatar.jpg" alt="Jiaqin Wu" style="width: 150px; border-radius: 50%;">
+                <h3 class="text-center">Jiaqin Wu</h3>
+                <h4 class="text-center">Data Scientist @ Center for Global Health Practice and Impact, Georgetown</h4>
+                <ul class="social-links" style="list-style: none; padding: 0; display: flex; justify-content: center; gap: 15px; margin-top: 10px;">
+                    <li>
+                        <a target="_blank" rel="noopener noreferrer" href="https://github.com/JiaqinWu" title="GitHub">
+                            <i class="fab fa-github"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a target="_blank" rel="noopener noreferrer" href="https://www.linkedin.com/in/jiaqin-wu-0315b6243/" title="LinkedIn">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="mailto:jw2104@georgetown.edu" title="Email">
+                            <i class="fas fa-envelope"></i>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div>
+                <h1>About</h1>
+                <p class="lead">
+                    I am a data scientist at 
+                    <a href="https://cghpi.georgetown.edu/" target="_blank" rel="noopener noreferrer">CGHPI</a>, Georgetown University. 
+                    I am interested in using data science to analyze different kinds of policy issues, especially in public health and criminal justice policy fields. 
+                    I have over 10 years of experience in life sciences and healthcare. In the past, I worked on developing ML methods leveraging biomedical data including biological sequences, multi-omics, and longitudinal electronic health records (EHR), for drug discovery and modeling of human diseases.
+                </p>
+                <p class="lead">
+                    I obtained my master’s degree in Data Science for Public Policy in 2024 from 
+                    <a href="https://mccourt.georgetown.edu/" target="_blank" rel="noopener noreferrer">McCourt School for Public Policy, Georgetown University</a>, 
+                    where I worked on multiple research projects to understand how drugs work in biological systems using computational biology. I developed data science skills in making interactive data visualizations and web applications.
+                </p>
+            </div>
         </section>
     </main>
 
     <footer>
-        <p>© 2025 Jiaqin Wu. All Rights Reserved.</p>
+        <p>© All Rights Reserved.</p>
         <div>
             <a href="https://github.com/JiaqinWu">GitHub</a> | 
             <a href="https://www.linkedin.com/in/jiaqin-wu-0315b6243">LinkedIn</a>
@@ -36,3 +69,4 @@
     </footer>
 </body>
 </html>
+
