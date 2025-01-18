@@ -5,17 +5,16 @@ body {
   color: #333;
 }
 
-/* Link styles */
-a {
-  color: #0077cc; /* Blue color for links */
-  text-decoration: none; /* Remove underline by default */
+/* Global link styles for main content */
+main a, .biography a {
+  color: #0077cc; /* Blue for main content links */
+  text-decoration: none;
 }
 
-a:hover {
+main a:hover, .biography a:hover {
   color: #0056a3; /* Darker blue on hover */
-  text-decoration: underline; /* Add underline when hovered */
+  text-decoration: underline;
 }
-
 
 /* Navbar Styles */
 .navbar {
@@ -42,7 +41,7 @@ a:hover {
 }
 
 .navbar-menu li a {
-  color: white;
+  color: white; /* White links in the navbar */
   font-size: 1rem;
   transition: color 0.3s;
 }
@@ -110,12 +109,12 @@ a:hover {
 
 .social-links li a {
   font-size: 1.5rem;
-  color: #355e3b;
+  color: #355e3b; /* Dark green for social links */
   transition: color 0.3s;
 }
 
 .social-links li a:hover {
-  color: #aad576;
+  color: #aad576; /* Light green */
 }
 
 /* Biography Section */
@@ -157,3 +156,4 @@ footer {
   margin-top: 20px;
   color: #333;
 }
+
