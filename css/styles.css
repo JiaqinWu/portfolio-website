@@ -5,10 +5,17 @@ body {
   color: #333;
 }
 
+/* Link styles */
 a {
-  text-decoration: none;
-  color: inherit;
+  color: #0077cc; /* Blue color for links */
+  text-decoration: none; /* Remove underline by default */
 }
+
+a:hover {
+  color: #0056a3; /* Darker blue on hover */
+  text-decoration: underline; /* Add underline when hovered */
+}
+
 
 /* Navbar Styles */
 .navbar {
