@@ -15,13 +15,12 @@ function toggleSearch() {
 function performSearch() {
     const query = document.getElementById("search-input").value.toLowerCase().trim();
     const contentContainer = document.querySelector("main"); // Main content where the search will happen
-    const noResultsMessage = document.getElementById("no-results-message");
 
     // Clear any previous highlights
     clearHighlights(contentContainer);
 
     if (!query) {
-        alert("Please enter a search term.");
+        alert("Please enter a search term."); // Alert for empty search
         return;
     }
 
@@ -29,24 +28,12 @@ function performSearch() {
     const matches = highlightMatches(contentContainer, query);
 
     if (matches > 0) {
-        if (noResultsMessage) noResultsMessage.style.display = "none"; // Hide no results message
+        alert(`Found ${matches} result(s) for "${query}".`); // Alert the number of matches
     } else {
-        // Show a subtle no results message
-        if (noResultsMessage) {
-            noResultsMessage.style.display = "block";
-            noResultsMessage.textContent = "No results found. Please try a different search term.";
-        } else {
-            const message = document.createElement("p");
-            message.id = "no-results-message";
-            message.textContent = "No results found. Please try a different search term.";
-            message.style.marginTop = "20px";
-            message.style.fontSize = "1rem";
-            message.style.textAlign = "center";
-            message.style.color = "#555"; // Subtle gray color
-            contentContainer.appendChild(message);
-        }
-    }    
+        alert("No results found. Please try a different search term."); // Alert for no matches
+    }
 }
+
 
 // Highlight matches in the content
 function highlightMatches(container, query) {
