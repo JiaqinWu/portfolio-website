@@ -31,17 +31,21 @@ function performSearch() {
     if (matches > 0) {
         if (noResultsMessage) noResultsMessage.style.display = "none"; // Hide no results message
     } else {
-        // Show no results message if nothing matches
+        // Show a subtle no results message
         if (noResultsMessage) {
             noResultsMessage.style.display = "block";
+            noResultsMessage.textContent = "No results found. Please try a different search term.";
         } else {
             const message = document.createElement("p");
             message.id = "no-results-message";
             message.textContent = "No results found. Please try a different search term.";
-            message.style.color = "red";
+            message.style.marginTop = "20px";
+            message.style.fontSize = "1rem";
+            message.style.textAlign = "center";
+            message.style.color = "#555"; // Subtle gray color
             contentContainer.appendChild(message);
         }
-    }
+    }    
 }
 
 // Highlight matches in the content
