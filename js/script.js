@@ -34,7 +34,6 @@ function performSearch() {
     }
 }
 
-
 // Highlight matches in the content
 function highlightMatches(container, query) {
     const contentTextNodes = getTextNodes(container); // Get all text nodes
@@ -52,8 +51,7 @@ function highlightMatches(container, query) {
             const afterMatch = document.createTextNode(node.nodeValue.slice(matchEndIndex));
 
             const highlightSpan = document.createElement("span");
-            highlightSpan.style.backgroundColor = "yellow";
-            highlightSpan.style.fontWeight = "bold";
+            highlightSpan.classList.add("highlight");
             highlightSpan.appendChild(matchText);
 
             const parentNode = node.parentNode;
@@ -81,7 +79,7 @@ function getTextNodes(container) {
 
 // Clear any existing highlights
 function clearHighlights(container) {
-    const highlightedSpans = container.querySelectorAll("span[style*='background-color: yellow']");
+    const highlightedSpans = container.querySelectorAll("span.highlight");
     highlightedSpans.forEach((span) => {
         const parentNode = span.parentNode;
         while (span.firstChild) {
@@ -89,11 +87,5 @@ function clearHighlights(container) {
         }
         parentNode.removeChild(span);
     });
-
-    // Remove "No results" message if it exists
-    const noResultsMessage = document.getElementById("no-results-message");
-    if (noResultsMessage) {
-        noResultsMessage.remove();
-    }
 }
 
