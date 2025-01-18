@@ -8,6 +8,7 @@
         <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
         <!-- Custom CSS -->
         <link rel="stylesheet" href="css/styles.css">
+        <script src="js/script.js"></script>
     </head>
     <body>
         <!-- Navigation Bar -->
@@ -23,10 +24,22 @@
                     <li><a href="projects.html">Projects</a></li>
                 </ul>
                 <div class="navbar-right">
-                    <button class="search-btn">
+                    <button class="search-btn" onclick="toggleSearch()">
                         <i class="fas fa-search"></i> Find
                     </button>
-                </div>
+                    <!-- Hidden search bar -->
+                    <div id="search-container" style="display: none;">
+                        <input
+                            type="text"
+                            id="search-input"
+                            placeholder="Search..."
+                            style="padding: 5px; margin-left: 10px; border: 1px solid #ccc; border-radius: 5px;"
+                        >
+                        <button class="search-submit" onclick="performSearch()" style="padding: 5px; background: #aad576; color: white; border: none; border-radius: 5px; margin-left: 5px;">
+                            Go
+                        </button>
+                    </div>
+                </div>                
             </nav>
         </header>
 
