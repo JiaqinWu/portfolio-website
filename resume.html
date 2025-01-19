@@ -83,9 +83,37 @@
     </style>
 </head>
 <body>
+    <!-- Navigation Bar -->
     <header>
-        <h1>Resume</h1>
-    </header>
+      <nav class="navbar">
+          <div class="navbar-left">
+              <a href="index.html" class="brand">Jiaqin Wu</a>
+          </div>
+          <ul class="navbar-menu">
+              <li><a href="index.html">Home</a></li>
+              <li><a href="publications.html">Publications</a></li>
+              <li><a href="resume.html">Resume</a></li>
+              <li><a href="projects.html">Projects</a></li>
+          </ul>
+          <div class="navbar-right">
+              <button class="search-btn" onclick="toggleSearch()">
+                  <i class="fas fa-search"></i> Find
+              </button>
+              <!-- Hidden search bar -->
+              <div id="search-container" style="display: none;">
+                  <input
+                      type="text"
+                      id="search-input"
+                      placeholder="Search..."
+                      style="padding: 5px; margin-left: 10px; border: 1px solid #ccc; border-radius: 5px;"
+                  >
+                  <button class="search-submit" onclick="performSearch()" style="padding: 5px; background: #aad576; color: white; border: none; border-radius: 5px; margin-left: 5px;">
+                      Go
+                  </button>
+              </div>
+          </div>                
+      </nav>
+  </header>
     <main>
         <!-- Work Section -->
         <section class="section">
