@@ -42,6 +42,7 @@ main a:hover, .biography a:hover {
 
 .navbar-menu li a {
   color: white; /* White links in the navbar */
+  text-decoration: none;
   font-size: 1rem;
   transition: color 0.3s;
 }
