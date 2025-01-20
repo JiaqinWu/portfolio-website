@@ -5,23 +5,12 @@ body {
   color: #333;
 }
 
-/* Global link styles for main content */
-main a, .biography a {
-  color: #0077cc; /* Blue for main content links */
-  text-decoration: none;
-}
-
-main a:hover, .biography a:hover {
-  color: #0056a3; /* Darker blue on hover */
-  text-decoration: underline;
-}
-
-/* Navbar Styles */
+/* Navigation Bar Styles */
 .navbar {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: #355e3b; /* Dark green color band */
+  background-color: #355e3b; /* Dark green color */
   padding: 10px 20px;
   color: white;
 }
@@ -30,6 +19,7 @@ main a:hover, .biography a:hover {
   font-size: 1.5rem;
   font-weight: bold;
   color: white;
+  text-decoration: none;
 }
 
 .navbar-menu {
@@ -42,28 +32,13 @@ main a:hover, .biography a:hover {
 
 .navbar-menu li a {
   color: white; /* White links in the navbar */
+  text-decoration: none;
   font-size: 1rem;
   transition: color 0.3s;
 }
 
 .navbar-menu li a:hover {
   color: #aad576; /* Light green */
-}
-
-.navbar-right .search-btn {
-  background: #aad576; /* Light green */
-  color: #355e3b; /* Dark green */
-  border: none;
-  padding: 5px 15px;
-  border-radius: 5px;
-  cursor: pointer;
-  font-size: 1rem;
-  transition: background 0.3s;
-}
-
-.navbar-right .search-btn:hover {
-  background: white;
-  color: #355e3b;
 }
 
 /* Main Section */
@@ -81,26 +56,25 @@ h1 {
 }
 
 .publication {
-  margin-bottom: 20px;
+  margin-bottom: 30px;
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  background-color: #f9f9f9;
 }
 
-.publication a {
-  font-size: 1rem;
-  font-weight: bold;
-  color: #0077cc; /* Blue link for title */
-  text-decoration: none;
+.publication h2 {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+  color: #333;
 }
 
-.publication a:hover {
-  color: #0056a3; /* Darker blue on hover */
+.authors strong {
+  color: #355e3b; /* Highlight authorship */
 }
 
-.authors {
-  font-size: 0.9rem;
-  color: #555;
-}
 
-/* Footer */
 footer {
   background: #f4f4f4;
   text-align: center;
