@@ -56,32 +56,30 @@ h1 {
 }
 
 .publication {
-  margin-bottom: 30px;
-  padding: 20px;
-  border: 1px solid #ddd;
-  border-radius: 5px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  background-color: #f9f9f9;
+  margin-bottom: 20px;
 }
 
-.publication h2 {
-  font-size: 1.5rem;
-  margin-bottom: 10px;
-  color: #333;
+.publication a {
+  font-size: 1rem;
+  font-weight: bold;
+  color: #0077cc; /* Blue link for title */
+  text-decoration: none;
 }
 
-.authors, .affiliations {
-  margin: 10px 0;
-  line-height: 1.6;
+.publication a:hover {
+  color: #0056a3; /* Darker blue on hover */
 }
 
-.authors strong {
-  color: #355e3b; /* Highlight authorship */
-}
-
-.affiliations {
+.authors {
   font-size: 0.9rem;
   color: #555;
+}
+
+.footer-note {
+  margin-top: 20px;
+  font-style: italic;
+  color: #777;
+  text-align: center;
 }
 
 footer {
