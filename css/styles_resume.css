@@ -1,0 +1,144 @@
+body {
+  font-family: 'Arial', sans-serif;
+  margin: 0;
+  padding: 0;
+  color: #333;
+}
+
+/* Global link styles for main content */
+main a, .biography a {
+  color: #0077cc; /* Blue for main content links */
+  text-decoration: none;
+}
+
+main a:hover, .biography a:hover {
+  color: #0056a3; /* Darker blue on hover */
+  text-decoration: underline;
+}
+
+/* Navbar Styles */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #355e3b; /* Dark green color band */
+  padding: 10px 20px;
+  color: white;
+}
+
+.navbar .brand {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: white;
+  text-decoration: none;
+}
+
+.navbar-menu {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+  margin: 0;
+  padding: 0;
+}
+
+.navbar-menu li a {
+  color: white; /* White links in the navbar */
+  font-size: 1rem;
+  transition: color 0.3s;
+}
+
+.navbar-menu li a:hover {
+  color: #aad576; /* Light green */
+}
+
+.navbar-right .search-btn {
+  background: #aad576; /* Light green */
+  color: #355e3b; /* Dark green */
+  border: none;
+  padding: 5px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background 0.3s;
+}
+
+.navbar-right .search-btn:hover {
+  background: white;
+  color: #355e3b;
+}
+
+/* Main Section */
+main {
+  padding: 40px;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+/* Section Headers */
+h1, h2 {
+  color: #355e3b; /* Dark green */
+  margin-bottom: 15px;
+}
+
+h1 {
+  font-size: 2rem;
+  text-align: center;
+}
+
+h2 {
+  font-size: 1.5rem;
+  margin-top: 30px;
+}
+
+/* Work, Education, Skills Sections */
+.section {
+  margin-bottom: 40px;
+}
+
+.section p {
+  margin: 5px 0;
+  line-height: 1.6;
+}
+
+.job-title, .school-name {
+  font-weight: bold;
+  font-size: 1.2rem;
+  display: block;
+  margin-bottom: 5px;
+}
+
+.job-location, .degree-location {
+  font-style: italic;
+  color: #555;
+  margin-bottom: 10px;
+}
+
+.date {
+  float: right;
+  font-size: 0.9rem;
+  color: #777;
+}
+
+/* Skills Section */
+.skills-list {
+  list-style: none;
+  padding: 0;
+}
+
+.skills-list li {
+  margin-bottom: 10px;
+  line-height: 1.6;
+}
+
+.skills-list li strong {
+  color: #355e3b; /* Dark green for section titles */
+}
+
+/* Footer */
+footer {
+  background: #f4f4f4;
+  text-align: center;
+  padding: 10px;
+  margin-top: 20px;
+  color: #333;
+}
