@@ -1,204 +1,138 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Resume - Jiaqin Wu</title>
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
-    <style>
-        body {
-            font-family: 'Arial', sans-serif;
-            margin: 0;
-            padding: 0;
-            color: #333;
-        }
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Jiaqin Wu - Portfolio</title>
+        <!-- FontAwesome for icons -->
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+        <!-- Custom CSS -->
+        <link rel="stylesheet" href="css/styles.css">
+        <script src="js/script.js"></script>
+    </head>
+    <body>
+        <!-- Navigation Bar -->
+        <header>
+            <nav class="navbar">
+                <div class="navbar-left">
+                    <a href="index.html" class="brand">Jiaqin Wu</a>
+                </div>
+                <ul class="navbar-menu">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="publications.html">Publications</a></li>
+                    <li><a href="resume.html">Resume</a></li>
+                    <li><a href="projects.html">Projects</a></li>
+                </ul>
+                <div class="navbar-right">
+                    <button class="search-btn" onclick="toggleSearch()">
+                        <i class="fas fa-search"></i> Find
+                    </button>
+                    <!-- Hidden search bar -->
+                    <div id="search-container" style="display: none;">
+                        <input
+                            type="text"
+                            id="search-input"
+                            placeholder="Search..."
+                            style="padding: 5px; margin-left: 10px; border: 1px solid #ccc; border-radius: 5px;"
+                        >
+                        <button class="search-submit" onclick="performSearch()" style="padding: 5px; background: #aad576; color: white; border: none; border-radius: 5px; margin-left: 5px;">
+                            Go
+                        </button>
+                    </div>
+                </div>                
+            </nav>
+        </header>
 
-        header {
-            background-color: #355e3b; /* Dark green */
-            color: white;
-            padding: 20px;
-            text-align: center;
-        }
+        <main>
+            <!-- Work Section -->
+            <section class="section">
+                <h2>Work</h2>
+                <div>
+                    <p>
+                        <span class="job-title">Sr. Applied Scientist</span>
+                        <span class="date">APR 2021 - PRESENT</span>
+                    </p>
+                    <p class="job-location">Amazon Web Services, New York, NY</p>
+                    <p>ML research and applications</p>
+                </div>
+                <div>
+                    <p>
+                        <span class="job-title">Principal Scientist</span>
+                        <span class="date">SEP 2019 - APR 2021</span>
+                    </p>
+                    <p class="job-location">Sema4, Stamford, CT</p>
+                    <p>Developed personalized phenotyping and ML applications to understand pregnancy complications and neonatal disorders using longitudinal EHR.</p>
+                </div>
+                <div>
+                    <p>
+                        <span class="job-title">Assistant Professor</span>
+                        <span class="date">JUN 2017 - SEP 2019</span>
+                    </p>
+                    <p class="job-location">Icahn School of Medicine at Mount Sinai, New York, NY</p>
+                    <p>Conducted research in Computational Systems Biology, focusing on ML methods to understand mechanisms of actions (MoAs) of small molecule compounds.</p>
+                </div>
+                <div>
+                    <p>
+                        <span class="job-title">Postdoctoral Fellow</span>
+                        <span class="date">JAN 2017 - JUN 2017</span>
+                    </p>
+                    <p class="job-location">Icahn School of Medicine at Mount Sinai, New York, NY</p>
+                    <p>Developed a DL model leveraging clinical variables from the EMR to study physiological aging.</p>
+                </div>
+            </section>
+    
+            <!-- Education Section -->
+            <section class="section">
+                <h2>Education</h2>
+                <div>
+                    <p>
+                        <span class="school-name">Icahn School of Medicine at Mount Sinai</span>
+                        <span class="date">AUG 2012 - DEC 2016</span>
+                    </p>
+                    <p class="degree-location">New York, NY</p>
+                    <p>PhD in Biomedical Science (Computational Biology)</p>
+                    <p>Developed computational methods to study the complexity of regulatory networks in mammalian systems.</p>
+                </div>
+                <div>
+                    <p>
+                        <span class="school-name">China Agricultural University</span>
+                        <span class="date">SEP 2008 - JUN 2012</span>
+                    </p>
+                    <p class="degree-location">Beijing, China</p>
+                    <p>BS in Biochemistry and Molecular Biology</p>
+                    <p>Used forward genetics to study the development biology of model plant <em>Arabidopsis thaliana</em>.</p>
+                </div>
+            </section>
+    
+            <!-- Skills Section -->
+            <section class="section">
+                <h2>Skills</h2>
+                <ul class="skills-list">
+                    <li>
+                        <strong>ML/Data Science:</strong> Deep Neural Networks, NLP, RL, Univariate and Multivariate Statistics, Ensemble Models, Network Analysis
+                    </li>
+                    <li>
+                        <strong>Biomedical Informatics:</strong> Electronic Medical Records, Next-gen Sequencing Data, Transcriptomics, Cheminformatics
+                    </li>
+                    <li>
+                        <strong>Software Development:</strong>
+                        <ul>
+                            <li><strong>Web frameworks:</strong> Flask, Shiny</li>
+                            <li><strong>Databases:</strong> MongoDB, MySQL, PostgreSQL</li>
+                            <li><strong>DevOps:</strong> Docker, Apache Mesos</li>
+                            <li><strong>UI:</strong> Bootstrap, React.js, Backbone.js, d3.js, THREE.js</li>
+                        </ul>
+                    </li>
+                </ul>
+            </section>
+        </main>
 
-        main {
-            padding: 20px;
-            max-width: 900px;
-            margin: 0 auto;
-        }
-
-        h1, h2 {
-            color: #355e3b;
-            margin-bottom: 10px;
-        }
-
-        h1 {
-            font-size: 2rem;
-            text-align: center;
-        }
-
-        h2 {
-            font-size: 1.5rem;
-            margin-top: 30px;
-        }
-
-        .section {
-            margin-bottom: 40px;
-        }
-
-        .section p {
-            margin: 5px 0;
-        }
-
-        .job-title, .school-name {
-            font-weight: bold;
-            font-size: 1.2rem;
-        }
-
-        .job-location, .degree-location {
-            font-style: italic;
-            color: #555;
-        }
-
-        .date {
-            float: right;
-            font-size: 0.9rem;
-            color: #777;
-        }
-
-        .skills-list {
-            list-style: none;
-            padding: 0;
-        }
-
-        .skills-list li {
-            margin-bottom: 10px;
-        }
-
-        footer {
-            background: #f4f4f4;
-            text-align: center;
-            padding: 10px;
-            margin-top: 20px;
-        }
-    </style>
-</head>
-<body>
-    <!-- Navigation Bar -->
-    <header>
-      <nav class="navbar">
-          <div class="navbar-left">
-              <a href="index.html" class="brand">Jiaqin Wu</a>
-          </div>
-          <ul class="navbar-menu">
-              <li><a href="index.html">Home</a></li>
-              <li><a href="publications.html">Publications</a></li>
-              <li><a href="resume.html">Resume</a></li>
-              <li><a href="projects.html">Projects</a></li>
-          </ul>
-          <div class="navbar-right">
-              <button class="search-btn" onclick="toggleSearch()">
-                  <i class="fas fa-search"></i> Find
-              </button>
-              <!-- Hidden search bar -->
-              <div id="search-container" style="display: none;">
-                  <input
-                      type="text"
-                      id="search-input"
-                      placeholder="Search..."
-                      style="padding: 5px; margin-left: 10px; border: 1px solid #ccc; border-radius: 5px;"
-                  >
-                  <button class="search-submit" onclick="performSearch()" style="padding: 5px; background: #aad576; color: white; border: none; border-radius: 5px; margin-left: 5px;">
-                      Go
-                  </button>
-              </div>
-          </div>                
-      </nav>
-  </header>
-    <main>
-        <!-- Work Section -->
-        <section class="section">
-            <h2>Work</h2>
-            <div>
-                <p>
-                    <span class="job-title">Sr. Applied Scientist</span>
-                    <span class="date">APR 2021 - PRESENT</span>
-                </p>
-                <p class="job-location">Amazon Web Services, New York, NY</p>
-                <p>ML research and applications</p>
-            </div>
-            <div>
-                <p>
-                    <span class="job-title">Principal Scientist</span>
-                    <span class="date">SEP 2019 - APR 2021</span>
-                </p>
-                <p class="job-location">Sema4, Stamford, CT</p>
-                <p>Developed personalized phenotyping and ML applications to understand pregnancy complications and neonatal disorders using longitudinal EHR.</p>
-            </div>
-            <div>
-                <p>
-                    <span class="job-title">Assistant Professor</span>
-                    <span class="date">JUN 2017 - SEP 2019</span>
-                </p>
-                <p class="job-location">Icahn School of Medicine at Mount Sinai, New York, NY</p>
-                <p>Conducted research in Computational Systems Biology, focusing on ML methods to understand mechanisms of actions (MoAs) of small molecule compounds.</p>
-            </div>
-            <div>
-                <p>
-                    <span class="job-title">Postdoctoral Fellow</span>
-                    <span class="date">JAN 2017 - JUN 2017</span>
-                </p>
-                <p class="job-location">Icahn School of Medicine at Mount Sinai, New York, NY</p>
-                <p>Developed a DL model leveraging clinical variables from the EMR to study physiological aging.</p>
-            </div>
-        </section>
-
-        <!-- Education Section -->
-        <section class="section">
-            <h2>Education</h2>
-            <div>
-                <p>
-                    <span class="school-name">Icahn School of Medicine at Mount Sinai</span>
-                    <span class="date">AUG 2012 - DEC 2016</span>
-                </p>
-                <p class="degree-location">New York, NY</p>
-                <p>PhD in Biomedical Science (Computational Biology)</p>
-                <p>Developed computational methods to study the complexity of regulatory networks in mammalian systems.</p>
-            </div>
-            <div>
-                <p>
-                    <span class="school-name">China Agricultural University</span>
-                    <span class="date">SEP 2008 - JUN 2012</span>
-                </p>
-                <p class="degree-location">Beijing, China</p>
-                <p>BS in Biochemistry and Molecular Biology</p>
-                <p>Used forward genetics to study the development biology of model plant <em>Arabidopsis thaliana</em>.</p>
-            </div>
-        </section>
-
-        <!-- Skills Section -->
-        <section class="section">
-            <h2>Skills</h2>
-            <ul class="skills-list">
-                <li>
-                    <strong>ML/Data Science:</strong> Deep Neural Networks, NLP, RL, Univariate and Multivariate Statistics, Ensemble Models, Network Analysis
-                </li>
-                <li>
-                    <strong>Biomedical Informatics:</strong> Electronic Medical Records, Next-gen Sequencing Data, Transcriptomics, Cheminformatics
-                </li>
-                <li>
-                    <strong>Software Development:</strong>
-                    <ul>
-                        <li><strong>Web frameworks:</strong> Flask, Shiny</li>
-                        <li><strong>Databases:</strong> MongoDB, MySQL, PostgreSQL</li>
-                        <li><strong>DevOps:</strong> Docker, Apache Mesos</li>
-                        <li><strong>UI:</strong> Bootstrap, React.js, Backbone.js, d3.js, THREE.js</li>
-                    </ul>
-                </li>
-            </ul>
-        </section>
-    </main>
     <footer>
-        <p>© 2025 Jiaqin Wu. All Rights Reserved.</p>
+        <p>© All Rights Reserved.</p>
+        <div>
+            <a href="https://github.com/JiaqinWu">GitHub</a> | 
+            <a href="https://www.linkedin.com/in/jiaqin-wu-0315b6243">LinkedIn</a>
+        </div>
     </footer>
 </body>
 </html>
