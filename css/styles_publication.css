@@ -1,3 +1,4 @@
+/* Global Styles */
 body {
   font-family: 'Arial', sans-serif;
   margin: 0;
@@ -41,6 +42,49 @@ body {
   color: #aad576; /* Light green */
 }
 
+.navbar-right .search-btn {
+  background: #aad576; /* Light green */
+  color: #355e3b; /* Dark green */
+  border: none;
+  padding: 5px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background 0.3s;
+}
+
+.navbar-right .search-btn:hover {
+  background: white;
+  color: #355e3b;
+}
+
+/* Hidden Search Bar */
+#search-container {
+  display: none;
+}
+
+#search-input {
+  width: 200px;
+  padding: 5px;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.search-submit {
+  padding: 5px 10px;
+  background: #aad576;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.search-submit:hover {
+  background: #355e3b;
+  color: white;
+}
+
 /* Main Section */
 main {
   padding: 40px;
@@ -56,7 +100,7 @@ h1 {
 }
 
 .publication {
-  margin-bottom: 30px;
+  margin-bottom: 20px;
   padding: 20px;
   border: 1px solid #ddd;
   border-radius: 5px;
@@ -64,21 +108,47 @@ h1 {
   background-color: #f9f9f9;
 }
 
-.publication h2 {
-  font-size: 1.5rem;
-  margin-bottom: 10px;
-  color: #333;
+.publication a {
+  font-size: 1rem;
+  font-weight: bold;
+  color: #0077cc; /* Blue link for title */
+  text-decoration: none;
+}
+
+.publication a:hover {
+  color: #0056a3; /* Darker blue on hover */
+}
+
+.authors {
+  font-size: 0.9rem;
+  color: #555;
 }
 
 .authors strong {
   color: #355e3b; /* Highlight authorship */
 }
 
+.footer-note {
+  margin-top: 20px;
+  font-style: italic;
+  color: #777;
+  text-align: center;
+}
 
+/* Footer */
 footer {
   background: #f4f4f4;
   text-align: center;
   padding: 10px;
   margin-top: 20px;
   color: #333;
+}
+
+footer a {
+  color: #0077cc;
+  text-decoration: none;
+}
+
+footer a:hover {
+  color: #0056a3;
 }
