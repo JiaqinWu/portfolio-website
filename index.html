@@ -1,100 +1,151 @@
 <!DOCTYPE html>
-    <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Jiaqin Wu - Portfolio</title>
-        <!-- FontAwesome for icons -->
-        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
-        <!-- Custom CSS -->
-        <link rel="stylesheet" href="css/styles.css">
-        <script src="js/script.js"></script>
-    </head>
-    <body>
-        <!-- Navigation Bar -->
-        <header>
-            <nav class="navbar">
-                <div class="navbar-left">
-                    <a href="index.html" class="brand">Jiaqin Wu</a>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jiaqin Wu - Data Science Portfolio</title>
+    <meta name="description" content="Jiaqin Wu is a data scientist focused on public health, public policy, geospatial analytics, and decision-support systems.">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+    <script defer src="js/script.js"></script>
+</head>
+<body>
+    <header class="site-header">
+        <nav class="navbar" aria-label="Primary navigation">
+            <a href="index.html" class="brand">Jiaqin Wu</a>
+            <ul class="navbar-menu">
+                <li><a class="active" href="index.html">Home</a></li>
+                <li><a href="projects.html">Projects</a></li>
+                <li><a href="publications.html">Publications</a></li>
+                <li><a href="resume.html">Resume</a></li>
+            </ul>
+            <div class="navbar-actions">
+                <button class="search-btn" type="button" onclick="toggleSearch()" aria-label="Open site search">
+                    <i class="fas fa-search" aria-hidden="true"></i>
+                </button>
+                <div id="search-container" class="search-container" hidden>
+                    <input type="text" id="search-input" placeholder="Search" aria-label="Search page content">
+                    <button class="search-submit" type="button" onclick="performSearch()">Go</button>
                 </div>
-                <ul class="navbar-menu">
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="publications.html">Publications</a></li>
-                    <li><a href="resume.html">Resume</a></li>
-                    <li><a href="projects.html">Projects</a></li>
-                </ul>
-                <div class="navbar-right">
-                    <button class="search-btn" onclick="toggleSearch()">
-                        <i class="fas fa-search"></i> Find
-                    </button>
-                    <!-- Hidden search bar -->
-                    <div id="search-container" style="display: none;">
-                        <input
-                            type="text"
-                            id="search-input"
-                            placeholder="Search..."
-                            style="padding: 5px; margin-left: 10px; border: 1px solid #ccc; border-radius: 5px;"
-                        >
-                        <button class="search-submit" onclick="performSearch()" style="padding: 5px; background: #aad576; color: white; border: none; border-radius: 5px; margin-left: 5px;">
-                            Go
-                        </button>
-                    </div>
-                </div>                
-            </nav>
-        </header>
+            </div>
+        </nav>
+    </header>
 
     <main>
-        <section class="hero">
-            <div style="display: block; text-align: center;">
-                <img class="portrait" src="./images/avatar.jpg" alt="Jiaqin Wu" style="width: 150px; border-radius: 50%;">
-                <h1 class="text-center">Jiaqin Wu</h1>
-                <h2 class="text-center">Data Scientist @ Center for Global Health Practice and Impact, Georgetown University</h2>
-                <h2 class="text-center">Data Analyst @ Office of Community Safety, Prince William County</h2>
-                <ul class="social-links" style="list-style: none; padding: 0; display: flex; justify-content: center; gap: 15px; margin-top: 10px;">
-                    <li>
-                        <a target="_blank" rel="noopener noreferrer" href="https://github.com/JiaqinWu" title="GitHub">
-                            <i class="fab fa-github" style="font-size: 24px; color: #333;"></i>
-                        </a>
-                    </li>
-                    <li>
-                        <a target="_blank" rel="noopener noreferrer" href="https://www.linkedin.com/in/jiaqin-wu-0315b6243/" title="LinkedIn">
-                            <i class="fab fa-linkedin" style="font-size: 24px; color: #0077b5;"></i>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="mailto:jw2104@georgetown.edu" title="Email">
-                            <i class="fas fa-envelope" style="font-size: 24px; color: #d14836;"></i>
-                        </a>
-                    </li>
-                </ul>
-            <div>
+        <section class="hero section-shell">
+            <div class="hero-copy">
+                <p class="hero-line">Data science for public systems</p>
+                <h1>Jiaqin Wu</h1>
+                <p class="hero-subtitle">
+                    I build machine learning, geospatial analytics, and decision-support tools for public health, community safety, and policy teams.
                 </p>
-                </p>
-                <p class="lead">
-                    I am a data scientist at 
-                    <a href="https://cghpi.georgetown.edu/" target="_blank" rel="noopener noreferrer">CGHPI</a>, Georgetown University and a data analyst at 
-                    <a href="https://www.pwcva.gov/department/community-safety/" target="_blank" rel="noopener noreferrer">Office of Community Safety</a>, Prince William County. 
-                    My interests lie in applying data science to tackle policy challenges, with a focus on public health and criminal justice. 
-                    Over the past three years, I've worked on projects that use machine learning to analyze policy data. 
-                    One of my projects involved building predictive models to help improve treatment outcomes for HIV patients in Haiti, supporting efforts to maintain positive health outcomes.
-                </p>
-                <p class="lead">
-                    I got my master’s degree in Data Science for Public Policy in 2024 from the 
-                    <a href="https://mccourt.georgetown.edu/" target="_blank" rel="noopener noreferrer">McCourt School of Public Policy</a> at Georgetown University. 
-                    During my studies, I worked on several research projects exploring how data science can address public policy issues. 
-                    I also developed skills in creating interactive data visualizations and web applications to make data insights more accessible and actionable.
-                </p>                              
+                <div class="hero-actions">
+                    <a class="button primary" href="projects.html">Explore Work</a>
+                    <a class="button secondary" href="files/Jiaqin_Wu_Resume.pdf" target="_blank" rel="noopener noreferrer">Download Resume</a>
+                </div>
+                <div class="role-strip" aria-label="Current roles">
+                    <article>
+                        <span>Georgetown University CGHPI</span>
+                        <strong>Data Scientist</strong>
+                    </article>
+                    <article>
+                        <span>Prince William County</span>
+                        <strong>Data Analyst</strong>
+                    </article>
+                </div>
+            </div>
+            <figure class="hero-portrait">
+                <img src="images/jiaqin-wu-portrait.jpg" alt="Jiaqin Wu seated in a professional setting">
+            </figure>
+        </section>
+
+        <section class="dark-band">
+            <div class="section-shell featured-grid">
+                <div class="section-intro inverted">
+                    <p class="section-label">Selected impact</p>
+                    <h2>From raw institutional data to tools people can use.</h2>
+                </div>
+                <div class="impact-list">
+                    <article>
+                        <span>3M+</span>
+                        <p>Electronic medical records processed through automated ETL, quality assurance, and reporting workflows.</p>
+                    </article>
+                    <article>
+                        <span>0.90</span>
+                        <p>ROC-AUC for HIV retention prediction models built with tuned ensemble and neural network methods.</p>
+                    </article>
+                    <article>
+                        <span>100+</span>
+                        <p>County datasets consolidated into SQL and Power BI systems for community safety planning.</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section class="section-shell split-section">
+            <div class="section-intro">
+                <p class="section-label">Focus</p>
+                <h2>Analytics that connect model performance to policy action.</h2>
+            </div>
+            <div class="focus-grid">
+                <article>
+                    <h3>Global health modeling</h3>
+                    <p>Predicting treatment interruption risk and building dashboards that help care teams prioritize follow-up.</p>
+                </article>
+                <article>
+                    <h3>Geospatial policy tools</h3>
+                    <p>Mapping community opportunity, housing pressure, service access, and transportation safety at decision-ready scales.</p>
+                </article>
+                <article>
+                    <h3>Operational data systems</h3>
+                    <p>Designing databases, ETL pipelines, APIs, and dashboards that reduce manual reporting and improve data quality.</p>
+                </article>
+            </div>
+        </section>
+
+        <section class="section-shell work-preview">
+            <div class="section-intro">
+                <p class="section-label">Projects</p>
+                <h2>Recent dashboards, research, and public-interest analysis.</h2>
+            </div>
+            <div class="project-preview-grid">
+                <a class="preview-card large" href="projects.html#haiti-predictive">
+                    <img src="images/Haiti2.jpg" alt="Predictive dashboard for Haiti HIV patients">
+                    <div>
+                        <span>Machine learning dashboard</span>
+                        <h3>Predicting HIV treatment interruption in Haiti</h3>
+                    </div>
+                </a>
+                <a class="preview-card" href="projects.html#community-opportunity">
+                    <div>
+                        <span>Geospatial policy index</span>
+                        <h3>Community Opportunity Index</h3>
+                    </div>
+                </a>
+                <a class="preview-card" href="projects.html#cdfi">
+                    <img src="images/CDFI.jpg" alt="CDFI lending dashboard">
+                    <div>
+                        <span>Finance and housing</span>
+                        <h3>CDFI lending dashboard</h3>
+                    </div>
+                </a>
+            </div>
+        </section>
+
+        <section class="contact-band">
+            <div class="section-shell contact-layout">
+                <h2>Let’s build clearer public data systems.</h2>
+                <div class="social-links" aria-label="Contact links">
+                    <a target="_blank" rel="noopener noreferrer" href="https://github.com/JiaqinWu" title="GitHub"><i class="fab fa-github" aria-hidden="true"></i> GitHub</a>
+                    <a target="_blank" rel="noopener noreferrer" href="https://www.linkedin.com/in/jiaqin-wu-0315b6243/" title="LinkedIn"><i class="fab fa-linkedin" aria-hidden="true"></i> LinkedIn</a>
+                    <a href="mailto:jiaqin.wu@georgetown.edu" title="Email"><i class="fas fa-envelope" aria-hidden="true"></i> Email</a>
+                </div>
             </div>
         </section>
     </main>
 
-    <footer>
-        <p>© All Rights Reserved.</p>
-        <div>
-            <a href="https://github.com/JiaqinWu">GitHub</a> | 
-            <a href="https://www.linkedin.com/in/jiaqin-wu-0315b6243">LinkedIn</a>
-        </div>
+    <footer class="site-footer">
+        <p>© Jiaqin Wu. All rights reserved.</p>
     </footer>
 </body>
 </html>
-

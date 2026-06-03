@@ -1,72 +1,86 @@
 <!DOCTYPE html>
-    <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Jiaqin Wu - Portfolio</title>
-        <!-- FontAwesome for icons -->
-        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
-        <!-- Custom CSS -->
-        <link rel="stylesheet" href="css/styles_publication.css">
-        <script src="js/script.js"></script>
-    </head>
-    <body>
-        <!-- Navigation Bar -->
-        <header>
-            <nav class="navbar">
-                <div class="navbar-left">
-                    <a href="index.html" class="brand">Jiaqin Wu</a>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Publications - Jiaqin Wu</title>
+    <meta name="description" content="Publications and conference presentations by Jiaqin Wu.">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+    <script defer src="js/script.js"></script>
+</head>
+<body>
+    <header class="site-header">
+        <nav class="navbar" aria-label="Primary navigation">
+            <a href="index.html" class="brand">Jiaqin Wu</a>
+            <ul class="navbar-menu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="projects.html">Projects</a></li>
+                <li><a class="active" href="publications.html">Publications</a></li>
+                <li><a href="resume.html">Resume</a></li>
+            </ul>
+            <div class="navbar-actions">
+                <button class="search-btn" type="button" onclick="toggleSearch()" aria-label="Open site search">
+                    <i class="fas fa-search" aria-hidden="true"></i>
+                </button>
+                <div id="search-container" class="search-container" hidden>
+                    <input type="text" id="search-input" placeholder="Search" aria-label="Search page content">
+                    <button class="search-submit" type="button" onclick="performSearch()">Go</button>
                 </div>
-                <ul class="navbar-menu">
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="publications.html">Publications</a></li>
-                    <li><a href="resume.html">Resume</a></li>
-                    <li><a href="projects.html">Projects</a></li>
-                </ul>
-                <div class="navbar-right">
-                    <button class="search-btn" onclick="toggleSearch()">
-                        <i class="fas fa-search"></i> Find
-                    </button>
-                    <!-- Hidden search bar -->
-                    <div id="search-container" style="display: none;">
-                        <input
-                            type="text"
-                            id="search-input"
-                            placeholder="Search..."
-                            style="padding: 5px; margin-left: 10px; border: 1px solid #ccc; border-radius: 5px;"
-                        >
-                        <button class="search-submit" onclick="performSearch()" style="padding: 5px; background: #aad576; color: white; border: none; border-radius: 5px; margin-left: 5px;">
-                            Go
-                        </button>
-                    </div>
-                </div>                
-            </nav>
-        </header>
-
-        <!-- Main Content -->
-        <main>
-            <h1>Publications</h1>
-
-            <!-- Publication Entry -->
-            <div class="publication">
-                <a href="#">Opportunities and challenges in access to healthcare for international migrants with work-related diseases and injuries in Gulf Cooperation Council countries: A systematic literature review protocol</a>
-                <p class="authors">
-                    Weijun Yu, Deus Bazira, Aleena Dawer, Jeanetta Floyd, Nicole Saad, <strong>Jiaqin Wu</strong>, Yulia Hutsul, Dylan Ratnarajah, Katherine Robsky, Oliver Johnson, Bryan Shaw, Martine Etienne-Mesubi
-                </p>
             </div>
+        </nav>
+    </header>
 
-            <!-- Add More Publications -->
-            <p class="footer-note">
-                More publications are on their way. Stay tuned!
-            </p>
-        </main>
+    <main>
+        <section class="page-hero section-shell">
+            <p class="section-label">Publications</p>
+            <h1>Research at the intersection of machine learning, public health, and policy.</h1>
+            <p>Peer-reviewed work and conference presentations connected to global health analytics, electronic medical record data, and public-interest research.</p>
+        </section>
 
-        <footer>
-            <p>© All Rights Reserved.</p>
-            <div>
-                <a href="https://github.com/JiaqinWu">GitHub</a> | 
-                <a href="https://www.linkedin.com/in/jiaqin-wu-0315b6243">LinkedIn</a>
+        <section class="section-shell publication-list">
+            <article class="publication">
+                <a href="https://doi.org/10.3389/ijph.2026.1609496" target="_blank" rel="noopener noreferrer">Applying machine learning to predict loss to follow-up among people living with HIV in Haiti using a national electronic medical record cohort</a>
+                <p>Wu, J., Shaw, B., et al. <em>International Journal of Public Health.</em></p>
+            </article>
+            <article class="publication">
+                <a href="https://doi.org/10.1371/journal.pone.0321681" target="_blank" rel="noopener noreferrer">Opportunities and challenges in access to healthcare for international migrants with work-related diseases and injuries in Gulf Cooperation Council countries</a>
+                <p>Yu, W., Dawer, A., Floyd, J., Saad, N., <strong>Wu, J.</strong>, et al. <em>PLOS ONE.</em></p>
+            </article>
+            <article class="publication">
+                <a href="https://doi.org/10.1016/j.childyouth.2025.108633" target="_blank" rel="noopener noreferrer">Intimate partner violence and parents' use of violent discipline against young children in Rwanda</a>
+                <p>Kohli, A., Shaw, B., Greenberg, J., DeGraw, E., Habumugisha, L., Sebareze, J. L., Setubi, A. F., <strong>Wu, J.</strong>, & Yantis, C. <em>Children and Youth Services Review.</em></p>
+            </article>
+        </section>
+
+        <section class="section-shell presentation-section">
+            <div class="section-intro">
+                <p class="section-label">Conference presentations</p>
+                <h2>Selected presentations</h2>
             </div>
-        </footer>
-    </body>
-    </html>
+            <div class="presentation-grid">
+                <article>
+                    <span>IAS 2025</span>
+                    <p>Predicting ART Interruptions: A Machine Learning Approach among PLHIV in Haiti.</p>
+                </article>
+                <article>
+                    <span>CUGH 2026</span>
+                    <p>Machine Learning for the Future of Global Health: Predicting HIV Treatment Interruptions in Haiti.</p>
+                </article>
+                <article>
+                    <span>CARPHA 2026</span>
+                    <p>Predicting Virological Failure in Pediatric and Adolescent HIV Patients in Haiti.</p>
+                </article>
+                <article>
+                    <span>CUGH 2025</span>
+                    <p>Applications and Interventions of Artificial Intelligence in Global Public Health.</p>
+                </article>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <p>© Jiaqin Wu. All rights reserved.</p>
+    </footer>
+</body>
+</html>

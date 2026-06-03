@@ -1,136 +1,172 @@
 <!DOCTYPE html>
-    <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Jiaqin Wu - Portfolio</title>
-        <!-- FontAwesome for icons -->
-        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
-        <!-- Custom CSS -->
-        <link rel="stylesheet" href="css/styles_resume.css">
-        <script src="js/script.js"></script>
-    </head>
-    <body>
-        <!-- Navigation Bar -->
-        <header>
-            <nav class="navbar">
-                <div class="navbar-left">
-                    <a href="index.html" class="brand">Jiaqin Wu</a>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resume - Jiaqin Wu</title>
+    <meta name="description" content="Resume for Jiaqin Wu, data scientist and policy-focused analyst.">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+    <script defer src="js/script.js"></script>
+</head>
+<body>
+    <header class="site-header">
+        <nav class="navbar" aria-label="Primary navigation">
+            <a href="index.html" class="brand">Jiaqin Wu</a>
+            <ul class="navbar-menu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="projects.html">Projects</a></li>
+                <li><a href="publications.html">Publications</a></li>
+                <li><a class="active" href="resume.html">Resume</a></li>
+            </ul>
+            <div class="navbar-actions">
+                <button class="search-btn" type="button" onclick="toggleSearch()" aria-label="Open site search">
+                    <i class="fas fa-search" aria-hidden="true"></i>
+                </button>
+                <div id="search-container" class="search-container" hidden>
+                    <input type="text" id="search-input" placeholder="Search" aria-label="Search page content">
+                    <button class="search-submit" type="button" onclick="performSearch()">Go</button>
                 </div>
-                <ul class="navbar-menu">
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="publications.html">Publications</a></li>
-                    <li><a href="resume.html">Resume</a></li>
-                    <li><a href="projects.html">Projects</a></li>
-                </ul>
-                <div class="navbar-right">
-                    <button class="search-btn" onclick="toggleSearch()">
-                        <i class="fas fa-search"></i> Find
-                    </button>
-                    <!-- Hidden search bar -->
-                    <div id="search-container" style="display: none;">
-                        <input
-                            type="text"
-                            id="search-input"
-                            placeholder="Search..."
-                            style="padding: 5px; margin-left: 10px; border: 1px solid #ccc; border-radius: 5px;"
-                        >
-                        <button class="search-submit" onclick="performSearch()" style="padding: 5px; background: #aad576; color: white; border: none; border-radius: 5px; margin-left: 5px;">
-                            Go
-                        </button>
-                    </div>
-                </div>                
-            </nav>
-        </header>
+            </div>
+        </nav>
+    </header>
 
-        <main>
-            <!-- Work Section -->
-            <section class="section">
-                <h2>Work</h2>
-                <div>
-                    <p>
-                        <span class="job-title">Data Scientist</span>
-                        <span class="date">Mar 2023 - Present</span>
-                    </p>
-                    <p class="job-location">CGHPI, Georgetown University, Washington, DC</p>
+    <main>
+        <section class="page-hero section-shell resume-hero">
+            <div>
+                <p class="section-label">Resume</p>
+                <h1>Data scientist for public health and policy operations.</h1>
+                <p>Python, SQL, machine learning, dashboards, geospatial analytics, ETL, and stakeholder-facing decision systems.</p>
+            </div>
+            <a class="button primary" href="files/Jiaqin_Wu_Resume.pdf" target="_blank" rel="noopener noreferrer">Download PDF</a>
+        </section>
+
+        <section class="section-shell resume-layout">
+            <aside class="resume-sidebar">
+                <h2>Core Stack</h2>
+                <div class="skill-cloud">
+                    <span>Python</span>
+                    <span>R</span>
+                    <span>SQL</span>
+                    <span>PySpark</span>
+                    <span>Scikit-learn</span>
+                    <span>XGBoost</span>
+                    <span>LightGBM</span>
+                    <span>CatBoost</span>
+                    <span>Power BI</span>
+                    <span>Tableau</span>
+                    <span>ArcGIS</span>
+                    <span>Streamlit</span>
+                    <span>R Shiny</span>
+                    <span>Docker</span>
+                    <span>AWS</span>
+                    <span>GCP</span>
                 </div>
-                <div>
-                    <p>
-                        <span class="job-title">Data Analyst</span>
-                        <span class="date">Oct 2024 - Present</span>
-                    </p>
-                    <p class="job-location">Office of Community Safety, Prince William County, Woodbridge, VA</p>
-                </div>
-                <div>
-                    <p>
-                        <span class="job-title">Data Analyst Consultant</span>
-                        <span class="date">Sep 2024 - Oct 2024</span>
-                    </p>
-                    <p class="job-location">Baker Donelson, Washington, DC</p>
-                </div>
-                <div>
-                    <p>
-                        <span class="job-title">MEL (Monitor, Evaluation, Learning)</span>
-                        <span class="date">Sep 2023 - Dec 2023</span>
-                    </p>
-                    <p class="job-location">Center for International Private Enterprise (CIPE), Washington, DC</p>
-                </div>
-                <div>
-                    <p>
-                        <span class="job-title">Data Analyst</span>
-                        <span class="date">Jun 2023 - Sep 2023</span>
-                    </p>
-                    <p class="job-location">Institute for Policy Studies (IPS) </p>
-                </div>
-            </section>
-    
-            <!-- Education Section -->
-            <section class="section">
-                <h2>Education</h2>
-                <div>
-                    <p>
-                        <span class="school-name">Georgetown University</span>
-                        <span class="date">AUG 2022 - May 2024</span>
-                    </p>
-                    <p class="degree-location">Washington, DC</p>
-                    <p>Master of Science in Data Science for Public Policy</p>
-                </div>
-                <div>
-                    <p>
-                        <span class="school-name">University of International Business and Economics (UIBE)</span>
-                        <span class="date">SEP 2018 - JUN 2022</span>
-                    </p>
-                    <p class="degree-location">Beijing, China</p>
-                    <p>Bachelor of Management in Customs Administration</p>
-                </div>
-            </section>
-    
-            <!-- Skills Section -->
-            <section class="section">
-                <h2>Skills</h2>
-                <ul class="skills-list">
-                    <li>
-                        <strong>ML/Data Science:</strong> Deep Neural Networks, NLP, Univariate and Multivariate Statistics, Ensemble Models, Network Analysis
-                    </li>
-                    <li>
-                        <strong>Software:</strong>
+            </aside>
+
+            <div class="timeline">
+                <section class="resume-section">
+                    <h2>Professional Experience</h2>
+                    <article class="timeline-item">
+                        <div>
+                            <h3>Data Scientist</h3>
+                            <p>Center for Global Health Practice and Impact, Georgetown University</p>
+                        </div>
+                        <time>Mar. 2023 - Present</time>
                         <ul>
-                            <li><strong>Web frameworks:</strong> Streamlit, Shiny</li>
-                            <li><strong>Databases:</strong> Firebase, MySQL, PostgreSQL, MS SQL Server</li>
-                            <li><strong>DevOps:</strong> Docker, AWS, Azure</li>
-                            <li><strong>Tools:</strong> Python, R, Java, Stata, Power BI, Tableau, ArcGIS</li>
+                            <li>Designed MySQL relational databases for 200+ medical institutions and 1K+ tables.</li>
+                            <li>Automated ETL pipelines for 3M+ electronic medical records, improving reporting efficiency by 70%.</li>
+                            <li>Built HIV retention prediction models with 0.90 ROC-AUC and deployed Streamlit and R Shiny tools for clinical stakeholders.</li>
                         </ul>
-                    </li>
-                </ul>
-            </section>
-        </main>
+                    </article>
+                    <article class="timeline-item">
+                        <div>
+                            <h3>Data Analyst</h3>
+                            <p>Office of Community Safety, Prince William County</p>
+                        </div>
+                        <time>Oct. 2024 - Present</time>
+                        <ul>
+                            <li>Built Power BI dashboards across Fire & EMS, criminal justice, community services, and other county agencies.</li>
+                            <li>Consolidated 100+ datasets into MS SQL Server and automated refresh pipelines, reducing manual processing by 60%.</li>
+                            <li>Developed the Community Opportunity Index and geospatial visualizations across 92 census tracts.</li>
+                        </ul>
+                    </article>
+                    <article class="timeline-item">
+                        <div>
+                            <h3>Consultant / Data Analyst</h3>
+                            <p>Institute for Policy Studies</p>
+                        </div>
+                        <time>Jun. 2023 - Sept. 2023 · Apr. 2026 - Present</time>
+                        <ul>
+                            <li>Scraped and processed 120K+ Massachusetts housing transaction records for fiscal impact modeling.</li>
+                            <li>Built Streamlit and mapping tools for property tax analysis, assessed value patterns, and policy filters.</li>
+                            <li>Automated Forbes billionaire list extraction with Python, GitHub Actions, and stakeholder email delivery.</li>
+                        </ul>
+                    </article>
+                    <article class="timeline-item">
+                        <div>
+                            <h3>Data Analyst Consultant</h3>
+                            <p>Baker Donelson</p>
+                        </div>
+                        <time>Sept. 2024 - Oct. 2024</time>
+                        <ul>
+                            <li>Integrated Attom, HMDA, and CDFI loan data into automated Python pipelines.</li>
+                            <li>Built an interactive Streamlit dashboard for lending trends, dynamic filters, and exports.</li>
+                        </ul>
+                    </article>
+                    <article class="timeline-item">
+                        <div>
+                            <h3>MEL Analyst</h3>
+                            <p>Center for International Private Enterprise</p>
+                        </div>
+                        <time>Sept. 2023 - Dec. 2023</time>
+                        <ul>
+                            <li>Built AWS ETL pipelines and applied NLP to 2K+ abstracts for monitoring, evaluation, and learning.</li>
+                        </ul>
+                    </article>
+                </section>
 
-    <footer>
-        <p>© All Rights Reserved.</p>
-        <div>
-            <a href="https://github.com/JiaqinWu">GitHub</a> | 
-            <a href="https://www.linkedin.com/in/jiaqin-wu-0315b6243">LinkedIn</a>
-        </div>
+                <section class="resume-section">
+                    <h2>Education</h2>
+                    <article class="timeline-item compact">
+                        <div>
+                            <h3>Georgetown University</h3>
+                            <p>Master of Science in Data Science for Public Policy</p>
+                        </div>
+                        <time>Aug. 2022 - May 2024</time>
+                    </article>
+                    <article class="timeline-item compact">
+                        <div>
+                            <h3>University of International Business and Economics</h3>
+                            <p>Bachelor of Management in Customs Administration</p>
+                        </div>
+                        <time>Sept. 2018 - Jun. 2022</time>
+                    </article>
+                </section>
+
+                <section class="resume-section">
+                    <h2>Teaching & Service</h2>
+                    <article class="timeline-item compact">
+                        <div>
+                            <h3>Instructional Associate, Data Visualization</h3>
+                            <p>McCourt School of Public Policy, Georgetown University</p>
+                        </div>
+                        <time>Aug. 2024 - Dec. 2024</time>
+                    </article>
+                    <article class="timeline-item compact">
+                        <div>
+                            <h3>Reviewer</h3>
+                            <p>Union World Conference on Lung Health; Frontiers in Public Health</p>
+                        </div>
+                        <time>2026</time>
+                    </article>
+                </section>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <p>© Jiaqin Wu. All rights reserved.</p>
     </footer>
 </body>
 </html>
